@@ -11,60 +11,49 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,600;1,300&family=Oswald:wght@300&display=swap" rel="stylesheet">
         <script type="text/javascript" src="script.js"></script>
-    </head>  
+    </head>
     <body>
-        
-        <header class="partesuperior">
-                
-            <img src="img/Vector.png" alt="logo alura" class="logocabeza">
-            <h1>Encriptación de textos</h1>
-                
-        </header>
-        <main class="caja">   
-              
-            <section class="bloqueizquierdo" id="bloque1">
-                <input type="text" id="textoUsuario"   required="" placeholder="Ingrese el texto aqui" >
-                
-                <div class="bloquebotones">
-                    <p class="letrachiquita"> <img src="img/exclamación.png" > Solo letras minúsculas y sin acentos</p>
-    
-                    <button type="button" id="boton-encriptar" class="botones">Encriptar</button>
-                    <button type="button" id="boton-desencriptar" class="botones">Desencriptar</button>
+        <div class="">
+            <header class="partesuperior">
+                <img src="img/Vector.png" alt="logo alura" class="logocabeza">
+                <h1>Encriptación de textos</h1>
+                <img src="./img/logo.png" id="logo_my">
+            </header>
+            <main class="caja todo">   
+                <div class="caja_contenedor">
+                    <section class="bloqueizquierdo bloqueizquierdo_contenedor" id="bloque1">
+                        <input type="text" id="textoUsuario"   required="" placeholder="Ingrese el texto aqui" >
+                        
+                        <div class="bloquebotones">
+                            <p class="letrachiquita"> <img src="img/exclamación.png" > Solo letras minúsculas y sin acentos</p>
+                            
+                            <button type="button" id="boton-encriptar" class="botones">Encriptar</button>
+                            <button type="button" id="boton-desencriptar" class="botones">Desencriptar</button>
+                        </div>
+                    </section>
+                    <section class="bloquederecho" id="bloque2">
+                        
+                        <textarea rows="10" cols="30"  id="resultado" readonly="" placeholder="Respuesta aqui"></textarea>
+                        <button type="button" class="btncopia" id="copiar">copiar</button>
+
+                        <div id="elementos">
+                            <img class="logomuñeco" src="img/Muñeco.png" alt="imagen de muñeco">
+                            <p class="p1">Ningún mensaje fue <br> encontrado</p>
+                            <p class="p2" >ingresa el texto que desees encriptar o <br> desencriptar.</p>
+                        </div>
+                    </section>
                 </div>
-
-            </section>
-    
-            <section class="bloquederecho" id="bloque2">
-                
-                <textarea rows="10" cols="30"  id="resultado" readonly="" placeholder="Respuesta aqui"></textarea>
-                <button type="button" class="btncopia" id="copiar">copiar</button>
-
-                <div id="elementos">
-                    <img class="logomuñeco" src="img/Muñeco.png" alt="imagen de muñeco">
-                    <p class="p1">Ningún mensaje fue <br> encontrado</p>
-                    <p class="p2" >ingresa el texto que desees encriptar o <br> desencriptar.</p>
-                </div>
-     
-
-            </section>
-
-        </main>
-        <footer>
-                <div class="parte-inferior">
-                    <img class="img-piepag" src="img/pie-pagina.png" alt="imagen de seguridad">
-                    <p class="copyright">© Copyright challenge 1 - G4 Alura & oracle</p>
-                </div>
-                    
-        </footer>
+            </main>
+            <footer>
+                    <div class="parte-inferior">
+                        <nav class="parte-inferior--nav">
+                            <li class="parte-inferior--li"><a href="https://www.linkedin.com/in/trujillosanchezdeisy23/"><img src="./img/linkedin_icon.png" alt=""></a></li>
+                            <li class="parte-inferior--li"><a href="https://github.com/Deisy08"><img src="./img/github_icon.png" alt=""></li>
+                        </nav>
+                        <p class="copyright">© Copyright challenge 1 - G4 Alura & Oracle</p>
+                    </div>
+            </footer>
+        </div>
+        <script src="./script.js"></script>
     </body>
-    <script>
-        var btnEncriptar = document.querySelector("#boton-encriptar");
-        var btnDesencriptar = document.querySelector("#boton-desencriptar");
-        var btnCopiar = document.querySelector("#copiar");
-
-        btnEncriptar.onclick = encriptar;
-        btnDesencriptar.onclick = desencriptar;
-        btnCopiar.onclick = copiar;
-
-    </script>
 </html>
