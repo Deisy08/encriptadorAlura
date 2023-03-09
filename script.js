@@ -1,11 +1,10 @@
-const btnEncriptar = document.querySelector("#boton-encriptar");
-const btnDesencriptar = document.querySelector("#boton-desencriptar");
-const btnCopiar = document.querySelector("#copiar");
+var btnEncriptar = document.querySelector("#boton-encriptar");
+var btnDesencriptar = document.querySelector("#boton-desencriptar");
+var btnCopiar = document.querySelector("#copiar");
 
 btnEncriptar.onclick = encriptar;
 btnDesencriptar.onclick = desencriptar;
 btnCopiar.onclick = copiar;
-
 
 function encriptar(){
     var textoInput = document.getElementById("textoUsuario").value.toLowerCase();
@@ -42,7 +41,7 @@ function desencriptar(){
 }
 
 function copiar(){
-    var btnCopiar = document.querySelector("#resultado");
+    let btnCopiar = document.querySelector("#resultado");
     btnCopiar.select();
     document.execCommand("copy");
 }

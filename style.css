@@ -121,8 +121,6 @@ h1{
 #boton-encriptar:hover{
     background: rgb(54 54 215 / 77%);
     font-size: large;
-    width: 240px;
-    height: 45px;
 }
 
 #boton-desencriptar{
@@ -132,11 +130,10 @@ h1{
 #boton-desencriptar:hover{
     background: rgba(162, 208, 226, 0.77);
     font-size: large;
-    width: 240px;
-    height: 45px;
 }
 
 #resultado{
+    display: none;
     border: none;
     border-radius: 10px;
     background: linear-gradient(45deg, #00ff4c, transparent);
@@ -144,7 +141,6 @@ h1{
     margin: 5%;
     font-size: 25px;
     height: 80%;
-    display: none;
 }
 /* para ocultar los elementos de este div*/
 .elementos{
@@ -216,7 +212,7 @@ h1{
 
 @media screen and (max-width:480px) {
 
-    .caja, .bloqueizquierdo, #copiar, #textoUsuario{
+    .caja, .bloqueizquierdo, #textoUsuario{
         width: auto;
     }
 
@@ -249,11 +245,11 @@ h1{
     }
 
     .botones, #boton-encriptar,#boton-desencriptar{
-        width: 100%;
+        width: 100%;    
     }
 
-    #boton-encriptar:hover,#boton-desencriptar:hover{
-        display: none;
+    .botones{
+        width: 100%;
     }
 
     #resultado{
@@ -268,7 +264,7 @@ h1{
     }
 
     #copiar{
-        width: 50%;
+        width: 60%;
     }
 
     .p1, .p2{
